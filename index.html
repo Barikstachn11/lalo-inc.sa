@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalo & Inc | Exclusive Automotive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.coches.net%2Fnoticias%2Fapollo-intensa-emozione&psig=AOvVaw3P8x_Ka5XgoKNwueIRfuw8&ust=1750598304603000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMj88c3Fg44DFQAAAAAdAAAAABAE$0');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .price-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 15px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        
+        .car-card:hover .car-image {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="playfair text-xl font-bold text-gray-900">Lalo & Inc</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inventory" class="text-gray-700 hover:text-black transition">Inventory</a>
+                    <a href="#about" class="text-gray-700 hover:text-black transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-black transition">Contact</a>
+                    <button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                        Request Consultation
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#inventory" class="block py-2 text-gray-700 hover:text-black">Inventory</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-black">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-black">Contact</a>
+            <button class="mt-2 bg-black text-white px-4 py-2 rounded w-full hover:bg-gray-800">
+                Request Consultation
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80" 
+                 alt="Luxury Car" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 px-4 text-center max-w-4xl">
+            <h1 class="playfair text-4xl md:text-6xl font-bold text-white mb-6">Exclusive Automotive Excellence</h1>
+            <p class="text-xl text-gray-300 mb-8">Curated selection of the world's most prestigious vehicles for the discerning collector.</p>
+            <a href="#inventory" class="inline-block bg-white text-black px-8 py-3 rounded font-medium hover:bg-gray-100 transition duration-300">
+                Explore Collection
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#inventory" class="text-white">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Top Exclusive</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">View all of the newest and most exclusive cars of our fleet</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ferrari -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£325,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="BMW M2 COMPETITION" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">BMW M2 COMPETITION</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 2,100 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2020</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 710 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The M2 Competition represents the ultimate expression of BMW's mid-rear-engined V8 sports car concept.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- McLaren -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£1,250,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="McLaren P1" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">MERCEDES AMG GT</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 1,200 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2015</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 903 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The Mercedes Amg GT is a limited-production plug-in hybrid sports car that redefined hypercar performance.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-more-btn" class="border-2 border-black text-black px-8 py-3 rounded font-medium hover:bg-black hover:text-white transition duration-300">
+                    View Full Inventory
+                </button>
+            </div>
+
+            <div id="more-ferraris" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Ferrari 2 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£275,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Ferrari F8 Tributo" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">Ferrari F8 Tributo</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 3,500 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2021</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 710 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The F8 Tributo is the new mid-rear-engined sports car that represents the highest expression of Ferrari's classic two-seater berlinetta.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ferrari 3 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£2,100,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Ferrari LaFerrari" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">Ferrari LaFerrari</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 800 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2016</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 950 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The LaFerrari is Ferrari's first ever production car to be equipped with the F1-derived hybrid solution - the HY-KERS system.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ferrari 4 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£350,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                             alt="Ferrari 812 Superfast" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">Ferrari 812 Superfast</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 2,800 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2020</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 789 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The 812 Superfast is the new 12-cylinder that represents the benchmark in the mid-front-engined sports car segment.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£350,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                             alt="Ferrari 812 Superfast" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">Ferrari 812 Superfast</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 2,800 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2020</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 789 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The 812 Superfast is the new 12-cylinder that represents the benchmark in the mid-front-engined sports car segment.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+               
+                <!-- Ferrari 5 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
+                    <div class="price-tag">£420,000</div>
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                             alt="Porsche GT2 RS" class="w-full h-64 object-cover car-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold mb-2">Porsche GT2 RS</h3>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 1,500 mi</span>
+                            <span><i class="fas fa-calendar-alt mr-1"></i> 2022</span>
+                            <span><i class="fas fa-horse-head mr-1"></i> 986 HP</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">The Porsche GT2 RS is Porsche's first series production PHEV (Plug-in Hybrid Electric Vehicle), with a V8 turbo engine and three electric motors.</p>
+                        <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">The Lalo & Inc Difference</h2>
+                    <p class="text-gray-700 mb-4">Founded in 2022, Lalo & Inc has established itself as the premier destination for collectors seeking the finest examples of automotive excellence in Gibraltar nearby Spain, so we count with experience providing in each country without any paper trouble for you .</p>
+                    <p class="text-gray-700 mb-6">Our team of experts combines decades of experience with an uncompromising commitment to quality, ensuring every vehicle meets our exacting standards.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">200-point certification process</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">Global sourcing network</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">Discreet, white-glove service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Showroom" class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold mb-4">Client Experiences</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Hear from collectors who have entrusted us with their automotive acquisitions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-black p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Lalo & Inc sourced my dream Ferrari when no one else could. Their attention to detail and global network is unmatched."</p>
+                    <div class="flex items-center">
+                        <div class="font-medium">James R.</div>
+                        <div class="ml-auto text-sm text-gray-400">Los Angeles</div>
+                    </div>
+                </div>
+                
+                <div class="bg-black p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"The McLaren P1 I purchased through Lalo & Inc exceeded all expectations. Their certification process gave me complete confidence."</p>
+                    <div class="flex items-center">
+                        <div class="font-medium">Sarah L.</div>
+                        <div class="ml-auto text-sm text-gray-400">New York</div>
+                    </div>
+                </div>
+                
+                <div class="bg-black p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Discretion and professionalism at the highest level. Lalo & Inc handled my collection acquisition with perfect execution."</p>
+                    <div class="flex items-center">
+                        <div class="font-medium">Private Client</div>
+                        <div class="ml-auto text-sm text-gray-400">Zurich</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Begin Your Journey</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our specialists are available to discuss your automotive aspirations in complete confidence.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 bg-black text-white">
+                        <h3 class="playfair text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium">Showroom Address</p>
+                                    <p class="text-gray-300"> 6 Bayside Road, Gibraltar GX111AA</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium">Contact Number</p>
+                                    <p class="text-gray-300">+0 000 000 000</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium">Email Address</p>
+                                    <p class="text-gray-300">contact@elegance-automotive.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="playfair text-lg font-bold mb-4">By Appointment Only</h4>
+                            <p class="text-gray-300">Our showroom operates by private appointment to ensure each client receives our undivided attention.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
+                            </div>
+                            <div class="mb-6">
+                                <label for="interest" class="block text-gray-700 mb-2">Vehicle of Interest</label>
+                                <select id="interest" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
+                                    <option value="">Select a vehicle</option>
+                                    <option value="ferrari">Ferrari 488 Pista</option>
+                                    <option value="lamborghini">Lamborghini Huracán EVO</option>
+                                    <option value="mclaren">McLaren P1</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-black text-white py-3 rounded font-medium hover:bg-gray-800 transition">
+                                Request Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="playfair text-2xl font-bold mb-4">Lalo & Inc</h3>
+                    <p class="text-gray-400 max-w-xs">The premier destination for collectors of exceptional automobiles.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Explore</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#inventory" class="text-gray-400 hover:text-white transition">Inventory</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Acquisition</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Collection Management</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Global Sourcing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <p class="text-gray-400 text-sm text-center">&copy; 2025 Lalo & Inc Automotive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div id="modal-car-content" class="mb-6">
+                <!-- Car details will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="mb-6">
+                <h4 class="playfair text-lg font-bold mb-3">Payment Options</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span>Full payment by bank transfer</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span>Cash payment upon delivery</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-info-circle text-yellow-500 mt-1 mr-2"></i>
+                        <span>Financing options coming soon</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <button id="ask-more-btn" class="w-full bg-gray-200 text-black py-2 rounded hover:bg-gray-300 transition mb-6">
+                <i class="fas fa-question-circle mr-2"></i> Ask More About This Vehicle
+            </button>
+            
+            <div id="contact-methods" class="hidden">
+                <div class="text-center mb-4">
+                    <p class="text-gray-700">Thank you for your interest! Contact us directly:</p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://instagram.com/lalo.incsa" target="_blank" class="text-pink-600 hover:text-pink-700">
+                        <i class="fab fa-instagram text-4xl"></i>
+                    </a>
+                    <a href="https://wa.me/15551234567" target="_blank" class="text-green-600 hover:text-green-700">
+                        <i class="fab fa-whatsapp text-4xl"></i>
+                    </a>
+                </div>
+                <div class="text-center text-sm text-gray-500">
+                    <p>Instagram: @lalo.incsa</p>
+                    <p>WhatsApp: +0 000 000 000</p>
+                </div>
+            </div>
+            
+            <button id="close-modal" class="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Inquiry Modal Handling
+        const inquiryButtons = document.querySelectorAll('.car-card button');
+        const modal = document.getElementById('inquiry-modal');
+        const closeModal = document.getElementById('close-modal');
+        const askMoreBtn = document.getElementById('ask-more-btn');
+        const contactMethods = document.getElementById('contact-methods');
+        const modalCarContent = document.getElementById('modal-car-content');
+        
+        inquiryButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get car details from parent card
+                const card = this.closest('.car-card');
+                const carName = card.querySelector('h3').textContent;
+                const price = card.querySelector('.price-tag').textContent;
+                const imgSrc = card.querySelector('img').src;
+                const description = card.querySelector('p').textContent;
+                
+                // Populate modal with car details
+                modalCarContent.innerHTML = `
+                    <div class="flex items-start mb-4">
+                        <img src="${imgSrc}" alt="${carName}" class="w-24 h-16 object-cover rounded">
+                        <div class="ml-4">
+                            <h3 class="playfair text-xl font-bold">${carName}</h3>
+                            <p class="text-gray-700">${price}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">${description}</p>
+                `;
+                
+                // Reset modal state
+                contactMethods.classList.add('hidden');
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Toggle contact methods when "Ask More" is clicked
+        askMoreBtn.addEventListener('click', function() {
+            contactMethods.classList.toggle('hidden');
+        });
+        
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // View more Ferraris
+        document.getElementById('view-more-btn').addEventListener('click', function() {
+            const moreFerraris = document.getElementById('more-ferraris');
+            const button = this;
+            
+            if (moreFerraris.classList.contains('hidden')) {
+                moreFerraris.classList.remove('hidden');
+                button.textContent = 'Hide Inventory';
+            } else {
+                moreFerraris.classList.add('hidden');
+                button.textContent = 'View Full Inventory';
+            }
+        });
+    </script>
+</body>
+</html>
