@@ -111,7 +111,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Ferrari -->
+                <!-- Car 0 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£325,000</div>
                     <div class="overflow-hidden">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 
-                <!-- McLaren -->
+                <!-- Car 1 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£1,250,000</div>
                     <div class="overflow-hidden">
@@ -160,8 +160,8 @@
                 </button>
             </div>
 
-            <div id="more-ferraris" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- Ferrari 2 -->
+            <div id="newsection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Car 2 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£275,000</div>
                     <div class="overflow-hidden">
@@ -182,7 +182,7 @@
                     </div>
                 </div>
 
-                <!-- Ferrari 3 -->
+                <!-- Car 3 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£2,100,000</div>
                     <div class="overflow-hidden">
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <!-- Ferrari 4 -->
+                <!-- Car 4 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£350,000</div>
                     <div class="overflow-hidden">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                
-                <!-- Ferrari 5 -->
+                <!-- Car 5 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£420,000</div>
                     <div class="overflow-hidden">
@@ -495,11 +495,9 @@
         </div>
     </footer>
 
-    <!-- Inquiry Modal -->
     <div id="inquiry-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
             <div id="modal-car-content" class="mb-6">
-                <!-- Car details will be inserted here by JavaScript -->
             </div>
             
             <div class="mb-6">
@@ -549,13 +547,11 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -569,7 +565,6 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
@@ -590,14 +585,13 @@
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Get car details from parent card
+                card
                 const card = this.closest('.car-card');
                 const carName = card.querySelector('h3').textContent;
                 const price = card.querySelector('.price-tag').textContent;
                 const imgSrc = card.querySelector('img').src;
                 const description = card.querySelector('p').textContent;
                 
-                // Populate modal with car details
                 modalCarContent.innerHTML = `
                     <div class="flex items-start mb-4">
                         <img src="${imgSrc}" alt="${carName}" class="w-24 h-16 object-cover rounded">
@@ -609,14 +603,12 @@
                     <p class="text-gray-700">${description}</p>
                 `;
                 
-                // Reset modal state
                 contactMethods.classList.add('hidden');
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });
         });
-        
-        // Toggle contact methods when "Ask More" is clicked
+    
         askMoreBtn.addEventListener('click', function() {
             contactMethods.classList.toggle('hidden');
         });
@@ -625,8 +617,8 @@
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         });
+
         
-        // Close modal when clicking outside
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 modal.classList.add('hidden');
@@ -634,16 +626,15 @@
             }
         });
 
-        // View more Ferraris
         document.getElementById('view-more-btn').addEventListener('click', function() {
-            const moreFerraris = document.getElementById('more-ferraris');
+            const newsection = document.getElementById('more-ferraris');
             const button = this;
             
-            if (moreFerraris.classList.contains('hidden')) {
-                moreFerraris.classList.remove('hidden');
+            if (newsection.classList.contains('hidden')) {
+                newsection.classList.remove('hidden');
                 button.textContent = 'Hide Inventory';
             } else {
-                moreFerraris.classList.add('hidden');
+                newsection.classList.add('hidden');
                 button.textContent = 'View Full Inventory';
             }
         });
