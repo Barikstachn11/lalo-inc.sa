@@ -111,7 +111,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Car 1 -->
+                <!-- Ferrari -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£325,000</div>
                     <div class="overflow-hidden">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 
-                <!-- Car 2 -->
+                <!-- McLaren -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£1,250,000</div>
                     <div class="overflow-hidden">
@@ -161,7 +161,7 @@
             </div>
 
             <div id="more-ferraris" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- Car 3 -->
+                <!-- Ferrari 2 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£275,000</div>
                     <div class="overflow-hidden">
@@ -182,7 +182,7 @@
                     </div>
                 </div>
 
-                <!-- Car 4 -->
+                <!-- Ferrari 3 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£2,100,000</div>
                     <div class="overflow-hidden">
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <!-- Car 5 -->
+                <!-- Ferrari 4 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£350,000</div>
                     <div class="overflow-hidden">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                
-                <!-- Car 6 -->
+                <!-- Ferrari 5 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£420,000</div>
                     <div class="overflow-hidden">
@@ -616,6 +616,7 @@
             });
         });
         
+        // Toggle contact methods when "Ask More" is clicked
         askMoreBtn.addEventListener('click', function() {
             contactMethods.classList.toggle('hidden');
         });
@@ -625,6 +626,7 @@
             document.body.style.overflow = 'auto';
         });
         
+        // Close modal when clicking outside
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 modal.classList.add('hidden');
@@ -632,15 +634,16 @@
             }
         });
 
+        // View more Ferraris
         document.getElementById('view-more-btn').addEventListener('click', function() {
-            const newsection = document.getElementById('more-ferraris');
+            const moreFerraris = document.getElementById('more-ferraris');
             const button = this;
             
-            if (newsection.classList.contains('hidden')) {
-                newsection.classList.remove('hidden');
+            if (moreFerraris.classList.contains('hidden')) {
+                moreFerraris.classList.remove('hidden');
                 button.textContent = 'Hide Inventory';
             } else {
-                newsection.classList.add('hidden');
+                moreFerraris.classList.add('hidden');
                 button.textContent = 'View Full Inventory';
             }
         });
