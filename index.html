@@ -138,7 +138,7 @@
                     <div class="price-tag">£1,250,000</div>
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="MERCEDES AMG GT" class="w-full h-64 object-cover car-image transition duration-300">
+                             alt="McLaren P1" class="w-full h-64 object-cover car-image transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="playfair text-xl font-bold mb-2">MERCEDES AMG GT</h3>
@@ -161,7 +161,7 @@
                 </button>
             </div>
 
-            <div id="Our-fleet" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div id="more-ferraris" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <!-- Car 3 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
                     <div class="price-tag">£275,000</div>
@@ -637,16 +637,16 @@
             }
         });
 
-        // View our fleet
+        // View more Ferraris
         document.getElementById('view-more-btn').addEventListener('click', function() {
-            const ourfleet = document.getElementById('more-ferraris');
+            const moreFerraris = document.getElementById('more-ferraris');
             const button = this;
             
-            if (ourfleet.classList.contains('hidden')) {
-                ourfleet.classList.remove('hidden');
+            if (moreFerraris.classList.contains('hidden')) {
+                moreFerraris.classList.remove('hidden');
                 button.textContent = 'Hide Inventory';
             } else {
-                ourfleet.classList.add('hidden');
+                moreFerraris.classList.add('hidden');
                 button.textContent = 'View Full Inventory';
             }
         });
